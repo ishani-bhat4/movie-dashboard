@@ -58,7 +58,7 @@ export default function App() {
     <div className="app-shell">
       <header className="app-header">
         <div>
-          <h1 className="app-title">Netflix Movie Signals</h1>
+          <h1 className="app-title">🎬 Netflix Movie Analytics Dashboard</h1>
           <p className="app-subtitle">
             Exploring how genre, language, budget and ratings interact across
             thousands of films.
