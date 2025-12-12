@@ -1,0 +1,196 @@
+/* src/index.css */
+
+:root {
+  color-scheme: dark;
+  --bg: #020617;
+  --bg-elevated: #02091c;
+  --bg-panel: #020617;
+  --border-subtle: #243b5e;
+  --accent: #e50914;
+  --accent-soft: #22c55e;
+  --text-main: #e5edff;
+  --text-subtle: #9fb3d9;
+  --text-muted: #64748b;
+  --radius-xl: 18px;
+  --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.9);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top left, #172554 0, #020617 45%);
+  color: var(--text-main);
+}
+
+/* Layout */
+
+.app-shell {
+  min-height: 100vh;
+  padding: 32px 32px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.app-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.app-title {
+  margin: 0;
+  font-size: 32px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.app-subtitle {
+  margin: 6px 0 0;
+  color: var(--text-subtle);
+  max-width: 640px;
+  font-size: 14px;
+}
+
+.app-badge {
+  align-self: flex-start;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-subtle);
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.2));
+}
+
+.app-main {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 24px;
+}
+
+/* Filters / sidebar */
+
+.filters-panel {
+  background: radial-gradient(circle at top left, #0f172a 0, #020617 55%);
+  border-radius: var(--radius-xl);
+  padding: 20px 18px 18px;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.filters-title {
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 13px;
+  color: var(--text-subtle);
+}
+
+.filter-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+}
+
+.filter-select {
+  margin-top: 4px;
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border-subtle);
+  background: rgba(15, 23, 42, 0.9);
+  color: var(--text-main);
+  font-size: 13px;
+}
+
+.filters-note {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+/* Charts grid */
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: minmax(0, auto);
+  gap: 18px;
+}
+
+/* Panels */
+
+.panel {
+  background: radial-gradient(circle at top left, #0b1220 0, #020617 55%);
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  padding: 14px 16px 10px;
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+}
+
+.panel-title {
+  font-size: 13px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-subtle);
+  margin-bottom: 6px;
+}
+
+.panel-caption {
+  margin-top: 4px;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.panel-body-empty {
+  padding: 24px 16px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* Summary stats */
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 12px;
+  margin-top: 4px;
+}
+
+.summary-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--text-muted);
+}
+
+.summary-value {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Responsive */
+
+@media (max-width: 960px) {
+  .app-main {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .charts-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
