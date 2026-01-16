@@ -65,7 +65,7 @@ Clone and install:
 git clone https://github.com/<user>/<repo>.git
 cd <repo>
 pip install -r requirements.txt
-
+```
 
 ## 📊 Key Insights
 
